@@ -6,13 +6,13 @@ class Square extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      value:'x'
+      value:null,
     };
   }
   render() {
     return (
-      <button className="square">
-        {this.props.value}
+      <button className="square" onClick={()=> this.setState({value:'x'})}>
+        {this.state.value}
       </button>
     );
   }
